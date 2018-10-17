@@ -1,0 +1,48 @@
+ <HTML>
+      <HEAD>
+        <TITLE>Sum</TITLE>
+
+        <script type="text/javascript">
+          function loadurl()
+          {
+		
+             var text = document.myform.number1.value;
+	     var e = document.getElementById("ddview");
+		
+	
+	if( e.value == "empid")
+	{
+		var url = "https://docs.google.com/spreadsheets/d/109T_Znpoq-JaQsmgrEBRlJUjMTSCiR4diUM2o9qFAgw/gviz/tq?tqx=out:html&tq=SELECT A, B, C, D, E,F,G,H WHERE H CONTAINS '"+text+"'&gid=823553478"
+		var res = encodeURIComponent(url);
+ window.location.assign(url);
+
+	}
+	else
+	{	
+	
+	window.location.assign("https://docs.google.com/spreadsheets/d/109T_Znpoq-JaQsmgrEBRlJUjMTSCiR4diUM2o9qFAgw/gviz/tq?tqx=out:html&tq&gid=823553478");
+           
+	}
+
+          }
+        </script>
+      </HEAD>
+
+      <BODY>
+
+        <FORM NAME="myform">
+
+<select id="ddview">
+  <option value="empid">EmployeeID</option>
+  <option value="empname">EmployeeName</option>
+  <option value="dt">Date</option>
+  <option value="division">Division</option>
+</select>
+          <INPUT TYPE="text" NAME="number1" VALUE=""/> + 
+          <INPUT TYPE="button" NAME="button" Value="=" onClick="loadurl()"/>
+
+         
+        </FORM>
+
+      </BODY>
+</HTML>
